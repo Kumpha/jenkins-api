@@ -54,7 +54,7 @@ pipeline {
             steps {
                 script {
                     echo 'gitlab login & push'
-                    sshCommand(remote: vm2, command: "cd api-jenkins-assignment/ \
+                    sshCommand(remote: vm2, command: "cd jenkins-api/ \
                     && echo '123456' | sudo -S docker login registry.gitlab.com \
                     && echo 'Kumpha' \
                     && echo 'glpat-f4dTxzyDBemNLeNr8MZj' \
