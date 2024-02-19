@@ -8,7 +8,7 @@ def index():
 
 @app.route("/getcode")
 def hello():
-    return {"message":"Hello, World!"}
+    return {"message":"Test featured"}
 
 @app.route("/plus/<num1>/<num2>")
 def plus(num1,num2):
