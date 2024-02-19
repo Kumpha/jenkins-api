@@ -58,8 +58,8 @@ pipeline {
                     && echo '123456' | sudo -S docker login registry.gitlab.com \
                     && echo 'Kumpha' \
                     && echo 'glpat-ZHQBxUrvJLiWNE2J1zdw' \
-                    && echo '123456' | sudo -S docker build -t registry.gitlab.com/Kumpha/jenkins-api-unittest . \
-                    && echo '123456' | sudo -S docker push registry.gitlab.com/Kumpha/jenkins-api-unittest"
+                    && echo '123456' | sudo -S docker build -t registry.gitlab.com/jenkins-img/jenkins-img .\
+                    && echo '123456' | sudo -S registry.gitlab.com/jenkins-img/jenkins-img"
                     )
 
                 }
@@ -71,10 +71,10 @@ pipeline {
                 sshCommand(remote: vm3, command: "echo '123456' | sudo -S docker login registry.gitlab.com \
                     && echo 'Kumpha' \
                     && echo 'glpat-ZHQBxUrvJLiWNE2J1zdw' \
-                    && echo '123456' | sudo -S docker pull registry.gitlab.com/Kumpha/jenkins-api-unittest \
+                    && echo '123456' | sudo -S docker pull registry.gitlab.com/jenkins-img/jenkins-img-unittest \
                     && echo '123456' | sudo -S docker stop api \
                     && echo '123456' | sudo -S docker rm api \
-                    && echo '123456' | sudo -S docker run -d -p 8001:5000 --name api registry.gitlab.com/Kumpha/jenkins-api-unittest"
+                    && echo '123456' | sudo -S docker run -d -p 8001:5000 --name api registry.gitlab.com/jenkins-img/jenkins-img-unittest"
                     )
 
             }
