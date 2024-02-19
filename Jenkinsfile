@@ -59,7 +59,7 @@ pipeline {
                     && echo 'Kumpha' \
                     && echo 'glpat-ZHQBxUrvJLiWNE2J1zdw' \
                     && echo '123456' | sudo -S docker build -t registry.gitlab.com/jenkins-img/jenkins-img .\
-                    && echo '123456' | sudo -S registry.gitlab.com/jenkins-img/jenkins-img"
+                    && echo '123456' | sudo -S docker push registry.gitlab.com/jenkins-img/jenkins-img"
                     )
 
                 }
