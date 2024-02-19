@@ -71,10 +71,10 @@ pipeline {
                 sshCommand(remote: vm3, command: "echo '123456' | sudo -S docker login registry.gitlab.com \
                     && echo 'Kumpha' \
                     && echo 'glpat-XyiZPmWdD4EYynymrv7b' \
-                    && echo '123456' | sudo -S docker pull registry.gitlab.com/jenkins-img/jenkins-img-unittest \
+                    && echo '123456' | sudo -S docker pull registry.gitlab.com/jenkins-img/jenkins-img \
                     && echo '123456' | sudo -S docker stop api \
                     && echo '123456' | sudo -S docker rm api \
-                    && echo '123456' | sudo -S docker run -d -p 5000:5000 --name api registry.gitlab.com/jenkins-img/jenkins-img-unittest"
+                    && echo '123456' | sudo -S docker run -d -p 5000:5000 --name api registry.gitlab.com/jenkins-img/jenkins-img"
                     )
 
             }
