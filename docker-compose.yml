@@ -2,4 +2,4 @@ services:
   jenkins-api:
     build: .
     ports:
-      - "8080:5000"
+      - "5000:5000"
