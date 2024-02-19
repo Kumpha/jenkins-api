@@ -57,7 +57,7 @@ pipeline {
                     sshCommand(remote: vm2, command: "cd jenkins-api/ \
                     && echo '123456' | sudo -S docker login registry.gitlab.com \
                     && echo 'Kumpha' \
-                    && echo 'glpat-ZHQBxUrvJLiWNE2J1zdw' \
+                    && echo 'glpat-XyiZPmWdD4EYynymrv7b' \
                     && echo '123456' | sudo -S docker build -t registry.gitlab.com/jenkins-img/jenkins-img .\
                     && echo '123456' | sudo -S docker push registry.gitlab.com/jenkins-img/jenkins-img"
                     )
@@ -70,7 +70,7 @@ pipeline {
                 echo 'gitlab pull and create container'
                 sshCommand(remote: vm3, command: "echo '123456' | sudo -S docker login registry.gitlab.com \
                     && echo 'Kumpha' \
-                    && echo 'glpat-ZHQBxUrvJLiWNE2J1zdw' \
+                    && echo 'glpat-XyiZPmWdD4EYynymrv7b' \
                     && echo '123456' | sudo -S docker pull registry.gitlab.com/jenkins-img/jenkins-img-unittest \
                     && echo '123456' | sudo -S docker stop api \
                     && echo '123456' | sudo -S docker rm api \
